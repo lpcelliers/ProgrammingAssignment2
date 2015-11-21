@@ -2,7 +2,7 @@
 
 ## Creates a special matrix, which containins a function to
 ## * set the value of the matrix
-## * set the value of the matrix
+## * get the value of the matrix
 ## * set the value of the inverse of the Matrix
 ## * get the value of the inverse of the Matrix
 
@@ -30,7 +30,7 @@ cacheSolve <- function(x, ...) {
     return(m)
   }
   data <- x$get()
-  m <- cacheSolve(data, ...)
+  m <- solve(data, ...)
   x$setcacheSolve(m)
   m
 }
